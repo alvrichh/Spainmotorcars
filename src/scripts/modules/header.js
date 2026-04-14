@@ -4,6 +4,7 @@ export const initHeader = () => {
   const header = document.querySelector("[data-header]");
   const toggle = document.querySelector("[data-nav-toggle]");
   const panel = document.querySelector("[data-nav-panel]");
+  const hero = document.querySelector(".hero");
   const links = panel ? panel.querySelectorAll("a") : [];
 
   if (!header || !toggle || !panel) {
@@ -15,7 +16,12 @@ export const initHeader = () => {
     toggle.setAttribute("aria-expanded", String(open));
   };
 
-  const onScroll = () => {
+  const syncHeaderState = () => {
+    const heroLimit = hero ? hero.offsetHeight - header.offsetHeight - 36 : 0;
+    const lightTheme = hero ? window.scrollY <= Math.max(heroLimit, 0) : false;
+
+    header.classList.toggle("is-light", lightTheme);
+    header.classList.toggle("is-dark", !lightTheme);
     header.classList.toggle("is-scrolled", window.scrollY > 18);
   };
 
@@ -37,7 +43,7 @@ export const initHeader = () => {
     }
   });
 
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  syncHeaderState();
+  window.addEventListener("scroll", syncHeaderState, { passive: true });
+  window.addEventListener("resize", syncHeaderState);
 };
-
