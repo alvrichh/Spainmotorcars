@@ -1,0 +1,13 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#EBEBEA"/>
+  <rect x="72" y="72" width="1056" height="716" rx="32" fill="#FAFAF8"/>
+  <path d="M182 592H1018" stroke="#1A1A1A" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M278 526C344 442 440 400 590 400C678 400 750 416 822 452L944 532H898C880 564 850 582 814 582C778 582 748 564 732 532H446C430 564 400 582 364 582C326 582 298 564 282 532H248L278 526Z" fill="#F0EFEC"/>
+  <path d="M344 500C426 442 502 420 600 420C692 420 762 438 830 474" stroke="#111111" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="364" cy="532" r="46" fill="#111111"/>
+  <circle cx="814" cy="532" r="46" fill="#111111"/>
+  <circle cx="364" cy="532" r="20" fill="#FAFAF8"/>
+  <circle cx="814" cy="532" r="20" fill="#FAFAF8"/>
+  <text x="116" y="158" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">MERCEDES-AMG SL 63</text>
+</svg>
+

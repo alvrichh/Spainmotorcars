@@ -1,0 +1,13 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#F2E8E5"/>
+  <rect x="72" y="72" width="1056" height="716" rx="32" fill="#FFF8F6"/>
+  <path d="M184 592H1020" stroke="#1A1A1A" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M286 510C364 424 482 380 634 384C728 386 808 410 872 454L950 526H896C878 560 850 578 814 578C778 578 748 560 732 526H442C424 560 394 578 358 578C322 578 292 560 276 526H250L286 510Z" fill="#B94235"/>
+  <path d="M358 496C440 430 524 406 636 408C724 410 800 428 850 466" stroke="#111111" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="358" cy="526" r="46" fill="#111111"/>
+  <circle cx="814" cy="526" r="46" fill="#111111"/>
+  <circle cx="358" cy="526" r="20" fill="#FFF8F6"/>
+  <circle cx="814" cy="526" r="20" fill="#FFF8F6"/>
+  <text x="116" y="158" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">FERRARI ROMA</text>
+</svg>
+

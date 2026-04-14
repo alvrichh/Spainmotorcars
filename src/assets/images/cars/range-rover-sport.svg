@@ -1,0 +1,13 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#ECE8E2"/>
+  <rect x="72" y="72" width="1056" height="716" rx="32" fill="#F8F6F2"/>
+  <path d="M176 618H1024" stroke="#1A1A1A" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M258 488H870L934 540H976V582H936C918 612 892 628 856 628C820 628 794 612 778 582H462C446 612 418 628 382 628C346 628 318 612 302 582H230V530L258 488Z" fill="#1C1C1C"/>
+  <path d="M304 474H502L566 410H790L862 474" stroke="#111111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="382" cy="582" r="46" fill="#111111"/>
+  <circle cx="856" cy="582" r="46" fill="#111111"/>
+  <circle cx="382" cy="582" r="20" fill="#F8F6F2"/>
+  <circle cx="856" cy="582" r="20" fill="#F8F6F2"/>
+  <text x="116" y="158" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">RANGE ROVER SPORT</text>
+</svg>
+

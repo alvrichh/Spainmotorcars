@@ -1,0 +1,13 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#E7E4DE"/>
+  <rect x="72" y="72" width="1056" height="716" rx="32" fill="#F7F5F0"/>
+  <path d="M186 612H1014" stroke="#1A1A1A" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M242 494H462L526 430H784L868 494H952V560H896C880 594 850 612 816 612C780 612 754 594 738 560H446C430 594 400 612 366 612C330 612 304 594 288 560H242V494Z" fill="#60636B"/>
+  <path d="M318 480H498L560 430H784L858 480" stroke="#111111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="366" cy="560" r="46" fill="#111111"/>
+  <circle cx="816" cy="560" r="46" fill="#111111"/>
+  <circle cx="366" cy="560" r="20" fill="#F7F5F0"/>
+  <circle cx="816" cy="560" r="20" fill="#F7F5F0"/>
+  <text x="116" y="158" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">AUDI RS 6 AVANT</text>
+</svg>
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SpainMotors Cars. Seleccion privada de deportivos, grand tourers y SUV premium con atencion cercana y criterio editorial."
+    />
+    <title>SpainMotors Cars</title>
+    <link rel="icon" href="./assets/images/brand-mark.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-header>
+        <div class="container site-header__inner">
+          <a class="site-header__brand" href="#home" aria-label="SpainMotors Cars">
+            <img src="./assets/images/brand-mark.svg" alt="SpainMotors Cars" />
+          </a>
+
+          <button
+            class="site-header__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-nav"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-header__nav" id="main-nav" aria-label="Principal" data-nav-panel>
+            <a href="#home">Inicio</a>
+            <a href="#about">Quienes somos</a>
+            <a href="#inventory">Coches</a>
+            <a href="#contact">Contacto</a>
+            <a
+              class="site-header__instagram"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero__media" aria-hidden="true">
+            <div class="hero__poster"></div>
+            <iframe
+              src="https://player.vimeo.com/video/1012097674?background=1&autoplay=1&loop=1&muted=1&autopause=0"
+              title="Video de coches de fondo"
+              loading="lazy"
+              allow="autoplay; fullscreen"
+            ></iframe>
+          </div>
+          <div class="hero__overlay"></div>
+
+          <div class="container hero__content" data-reveal>
+            <p class="eyebrow">Curated performance / Spain</p>
+            <h1>
+              Coches con presencia,
+              <span>seleccionados con calma.</span>
+            </h1>
+            <p class="hero__lead">
+              SpainMotors Cars presenta deportivos, berlinas y SUV premium con una puesta
+              en escena limpia, cercana y pensada para generar confianza desde el primer
+              vistazo.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--solid" href="#inventory">Ver seleccion</a>
+              <a class="button button--ghost" href="#contact">Hablar con nosotros</a>
+            </div>
+
+            <ul class="hero__metrics" aria-label="Metricas destacadas">
+              <li>
+                <strong>Selecciones cortas</strong>
+                <span>Un catalogo cuidado y sin ruido.</span>
+              </li>
+              <li>
+                <strong>Atencion cercana</strong>
+                <span>Contacto directo, citas y sourcing.</span>
+              </li>
+              <li>
+                <strong>Imagen premium</strong>
+                <span>Marca sobria, aire editorial, foco en confianza.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="about section" id="about">
+          <div class="container about__layout">
+            <div class="section-heading" data-reveal>
+              <p class="eyebrow">Quienes somos</p>
+              <h2>Marca, criterio y acompanamiento en cada seleccion.</h2>
+            </div>
+
+            <div class="about__grid">
+              <div class="about__story" data-reveal>
+                <p>
+                  Nace como escaparate visual para piezas con caracter: deportivos,
+                  grand tourers y SUV premium que piden una presentacion limpia, elegante y
+                  honesta.
+                </p>
+                <p>
+                  No buscamos parecer marketplace. Buscamos transmitir curacion, confianza
+                  y una experiencia mas cercana a estudio editorial que a portal masivo.
+                </p>
+
+                <div class="about__notes">
+                  <article>
+                    <span>01</span>
+                    <h3>Seleccion enfocada</h3>
+                    <p>Solo unidades con presencia, historia clara y lenguaje visual fuerte.</p>
+                  </article>
+                  <article>
+                    <span>02</span>
+                    <h3>Presentacion limpia</h3>
+                    <p>Imagen sobria, ritmo sereno y espacio para que coche respire.</p>
+                  </article>
+                  <article>
+                    <span>03</span>
+                    <h3>Trato directo</h3>
+                    <p>Instagram, email y cita privada como canales visibles desde inicio.</p>
+                  </article>
+                </div>
+              </div>
+
+              <div class="about__visuals" data-reveal>
+                <figure class="about__frame about__frame--tall">
+                  <img
+                    src="./assets/images/about-studio.svg"
+                    alt="Composicion editorial de estudio para SpainMotors Cars"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="about__frame about__frame--detail">
+                  <img
+                    src="./assets/images/about-detail.svg"
+                    alt="Detalle visual minimalista inspirado en automocion premium"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="inventory section" id="inventory">
+          <div class="container inventory__intro" data-reveal>
+            <div class="section-heading">
+              <p class="eyebrow">Coches destacados</p>
+              <h2>Grid limpio, visual y listo para crecer.</h2>
+            </div>
+            <p class="inventory__copy">
+              Mock local para primera version. Cada ficha mantiene tono premium, datos
+              claros y llamada discreta a contacto.
+            </p>
+          </div>
+
+          <div class="container">
+            <div class="inventory__grid" data-cars-grid></div>
+          </div>
+        </section>
+
+        <section class="contact section" id="contact">
+          <div class="container contact__grid">
+            <div class="contact__copy" data-reveal>
+              <p class="eyebrow">Contacto</p>
+              <h2>Hablemos de siguiente pieza para showroom o sourcing.</h2>
+              <p>
+                Primer corte listo para Vercel: escaparate claro, sin backend y sin ruido
+                innecesario. Canales directos para iniciar conversacion.
+              </p>
+            </div>
+
+            <div class="contact__panel" data-reveal>
+              <a href="mailto:hola@spainmotorscars.com">hola@spainmotorscars.com</a>
+              <a href="tel:+34600000000">+34 600 000 000</a>
+              <p>Madrid / Marbella / Gestion remota</p>
+              <a
+                class="button button--solid"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver Instagram
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <a class="site-footer__brand" href="#home">
+            <img src="./assets/images/brand-mark.svg" alt="SpainMotors Cars" />
+          </a>
+          <p>SpainMotors Cars <span data-year></span>. Escaparate visual premium.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

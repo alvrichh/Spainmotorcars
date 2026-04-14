@@ -1,0 +1,11 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1200" fill="#EDE9E3"/>
+  <rect x="86" y="96" width="728" height="1008" rx="32" fill="#F9F7F2"/>
+  <path d="M206 770C300 654 412 600 544 608C642 614 720 648 760 700V930H146V876C158 852 178 806 206 770Z" fill="#111111"/>
+  <path d="M232 744C316 640 422 592 550 598C624 602 688 626 740 674" stroke="#C89E78" stroke-width="12" stroke-linecap="round"/>
+  <path d="M166 322H734" stroke="#111111" stroke-width="2"/>
+  <path d="M166 358H734" stroke="#111111" stroke-width="2" stroke-opacity="0.2"/>
+  <text x="166" y="284" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="24" font-weight="600" letter-spacing="6">CURATED SHOWROOM</text>
+  <text x="166" y="1010" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="16" font-weight="600" letter-spacing="4">IMAGE / TRUST / SELECTION</text>
+</svg>
+
