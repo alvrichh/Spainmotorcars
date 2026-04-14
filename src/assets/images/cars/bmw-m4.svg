@@ -1,0 +1,13 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#E8E8E8"/>
+  <rect x="72" y="72" width="1056" height="716" rx="32" fill="#F8F8F7"/>
+  <path d="M186 604H1014" stroke="#1A1A1A" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M274 514C356 430 474 386 626 390C720 392 802 416 872 460L954 530H902C884 564 856 582 820 582C784 582 756 564 740 530H450C432 564 402 582 366 582C330 582 300 564 284 530H252L274 514Z" fill="#50545B"/>
+  <path d="M360 492C430 434 516 410 632 412C718 414 794 434 860 468" stroke="#111111" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="366" cy="530" r="46" fill="#111111"/>
+  <circle cx="820" cy="530" r="46" fill="#111111"/>
+  <circle cx="366" cy="530" r="20" fill="#F8F8F7"/>
+  <circle cx="820" cy="530" r="20" fill="#F8F8F7"/>
+  <text x="116" y="158" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">BMW M4 COMPETITION</text>
+</svg>
+

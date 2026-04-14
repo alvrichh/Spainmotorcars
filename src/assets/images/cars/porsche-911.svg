@@ -1,0 +1,13 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#EAE7E1"/>
+  <rect x="72" y="72" width="1056" height="716" rx="32" fill="#F7F5F1"/>
+  <path d="M188 590H1018" stroke="#1A1A1A" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M270 496C324 436 418 396 572 396C706 396 798 426 870 492C894 514 924 524 966 528L936 572H870C854 606 828 624 794 624C760 624 734 606 718 572H470C454 606 428 624 394 624C358 624 332 606 318 572H232L270 496Z" fill="#9A9DA1"/>
+  <path d="M360 488C408 440 478 416 576 416C656 416 730 432 792 470C816 484 844 500 876 516" stroke="#111111" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="394" cy="572" r="46" fill="#111111"/>
+  <circle cx="794" cy="572" r="46" fill="#111111"/>
+  <circle cx="394" cy="572" r="20" fill="#F7F5F1"/>
+  <circle cx="794" cy="572" r="20" fill="#F7F5F1"/>
+  <text x="116" y="158" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700">PORSCHE 911</text>
+</svg>
+

@@ -1,0 +1,18 @@
+<svg width="260" height="120" viewBox="0 0 260 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="260" height="120" fill="white"/>
+  <g stroke="#111111" stroke-width="2" stroke-linecap="round">
+    <path d="M42 93C24 79 16 62 16 40"/>
+    <path d="M218 93C236 79 244 62 244 40"/>
+    <path d="M32 82L24 72"/>
+    <path d="M28 68L20 58"/>
+    <path d="M26 54L18 44"/>
+    <path d="M34 90L28 82"/>
+    <path d="M228 82L236 72"/>
+    <path d="M232 68L240 58"/>
+    <path d="M234 54L242 44"/>
+    <path d="M226 90L232 82"/>
+  </g>
+  <text x="130" y="52" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="700" text-anchor="middle" letter-spacing="2">SPAIN</text>
+  <text x="130" y="76" fill="#111111" font-family="Avenir Next, Segoe UI, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="4">MOTORS CARS</text>
+</svg>
+
