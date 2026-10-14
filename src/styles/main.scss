@@ -2,9 +2,11 @@
 @use "./base/reset";
 @use "./base/typography";
 @use "./pages/home";
+@use "./pages/legal";
 @use "./components/header";
 @use "./components/hero";
 @use "./components/about";
 @use "./components/inventory";
 @use "./components/footer";
+@use "./components/cookie-banner";
 
