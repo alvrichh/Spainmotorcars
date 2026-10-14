@@ -14,6 +14,8 @@ La web es una landing de una sola página, rápida y sin backend. Presenta la ma
 - [Puesta en marcha](#puesta-en-marcha)
 - [Estructura del proyecto](#estructura-del-proyecto)
 - [Datos de la marca](#datos-de-la-marca)
+- [Idiomas](#idiomas)
+- [Modo oscuro](#modo-oscuro)
 - [Gestionar el inventario](#gestionar-el-inventario)
 - [Identidad visual](#identidad-visual)
 - [Accesibilidad y rendimiento](#accesibilidad-y-rendimiento)
@@ -59,6 +61,8 @@ src/
 ├── privacidad.html
 ├── cookies.html
 ├── 404.html                   # Página de error
+├── en/                        # Versión en inglés: index, legal-notice, privacy, cookies
+├── i18n/strings.js            # Textos compartidos en ES y EN
 ├── index.js                   # Punto de entrada: fuentes, estilos y módulos
 ├── partials/                  # Piezas compartidas entre páginas
 │   ├── head.html              # Metadatos comunes e iconos
@@ -76,6 +80,7 @@ src/
 │       ├── cookieBanner.js    # Aviso de cookies
 │       ├── heroMedia.js       # Vídeo de fondo del hero
 │       ├── reveal.js          # Animación de entrada al hacer scroll
+│       ├── theme.js           # Modo claro y oscuro
 │       └── year.js            # Año del copyright
 └── styles/
     ├── main.scss              # Orden de carga
@@ -105,6 +110,23 @@ En cualquier HTML se pueden usar con dobles llaves:
 
 Las piezas compartidas de `src/partials/` se insertan con `{{> header}}`, `{{> footer}}` o `{{> head}}`. Si se usa una clave que no existe, la compilación muestra un aviso.
 
+## Idiomas
+
+La web está en español en `/` y en inglés en `/en/`. El selector ES/EN del header enlaza cada página con su equivalente.
+
+- **Textos compartidos** del header, el footer, el aviso de cookies y las fichas: están en [`src/i18n/strings.js`](src/i18n/strings.js) y se usan en el HTML con `{{t.clave}}`.
+- **Contenido de cada página:** tiene una plantilla por idioma, `src/*.html` para español y `src/en/*.html` para inglés.
+- **Páginas y sus traducciones:** están listadas en `webpack.config.js`. Para añadir una página nueva, crea las dos plantillas y añade una entrada a esa lista.
+- **Datos de los coches:** `category`, `transmission` y `alt` aceptan un texto o un objeto `{ es, en }`.
+
+Los textos legales en inglés indican que prevalece la versión española.
+
+## Modo oscuro
+
+El botón del header cambia entre modo claro y oscuro y guarda la elección en el navegador. Si el visitante no ha elegido, se sigue la preferencia del sistema.
+
+Los colores del modo oscuro se definen en [`src/styles/base/_variables.scss`](src/styles/base/_variables.scss), en el bloque `dark-tokens`. Los componentes solo usan variables, así que un color nuevo debe definirse en los dos modos.
+
 ## Gestionar el inventario
 
 Todo el inventario vive en [`src/scripts/data/cars.js`](src/scripts/data/cars.js). Para añadir un coche:
@@ -118,11 +140,11 @@ Todo el inventario vive en [`src/scripts/data/cars.js`](src/scripts/data/cars.js
   brand: "Porsche",
   model: "911 GT3 Touring",
   year: 2024,
-  price: 239000,          // número en euros, o un texto como "Consultar"
+  price: 239000,          // número en euros, o null para "Consultar"
   mileage: 4200,          // kilómetros
   power: 510,             // CV
   transmission: "PDK",
-  category: "Coupé",
+  category: { es: "Coupé", en: "Coupé" },
   status: "available",    // "available" | "reserved" | "sold"
   image: porscheGt3,
   alt: "Porsche 911 GT3 Touring en color plata"
