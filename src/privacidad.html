@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>Política de privacidad · {{brandName}}</title>
+    <meta name="description" content="Cómo trata {{brandName}} los datos personales de quienes contactan con nosotros." />
+    <link rel="canonical" href="{{siteUrl}}/privacidad" />
+  </head>
+  <body>
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main" class="legal">
+        <div class="container legal__layout">
+          <header class="legal__header">
+            <p class="eyebrow">Legal</p>
+            <h1>Política de privacidad</h1>
+            <p class="legal__updated">Última actualización: {{legalUpdated}}</p>
+          </header>
+
+          <div class="legal__body">
+            <p>
+              Esta política explica cómo tratamos tus datos personales conforme al
+              Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 de Protección de
+              Datos Personales y garantía de los derechos digitales (LOPDGDD).
+            </p>
+
+            <h2>1. Responsable del tratamiento</h2>
+            <dl class="legal__data">
+              <div><dt>Responsable</dt><dd>{{legalName}}</dd></div>
+              <div><dt>NIF / CIF</dt><dd>{{taxId}}</dd></div>
+              <div><dt>Domicilio</dt><dd>{{legalAddress}}</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+            </dl>
+
+            <h2>2. Qué datos tratamos</h2>
+            <p>
+              Este sitio no tiene formularios ni crea perfiles de usuario. Solo tratamos los
+              datos que tú nos facilitas cuando nos escribes por email o WhatsApp o cuando
+              nos llamas: normalmente nombre, teléfono, email y la información sobre el
+              vehículo que te interesa.
+            </p>
+
+            <p>
+              Además, al navegar se recogen datos técnicos como la dirección IP o el tipo de
+              navegador. Si aceptas las cookies de análisis, también datos estadísticos de
+              uso. Puedes consultar el detalle en la
+              <a href="/cookies">política de cookies</a>.
+            </p>
+
+            <h2>3. Para qué los usamos y con qué base legal</h2>
+            <ul>
+              <li>
+                <strong>Responder a tus consultas</strong> y organizar visitas. La base
+                legal es tu consentimiento al contactarnos y la aplicación de medidas
+                precontractuales a petición tuya.
+              </li>
+              <li>
+                <strong>Gestionar la compraventa</strong> si finalmente adquieres un
+                vehículo. La base legal es la ejecución del contrato.
+              </li>
+              <li>
+                <strong>Analizar el uso de la web</strong> para mejorarla, solo si
+                aceptas las cookies de análisis. La base legal es tu consentimiento, que
+                puedes retirar en cualquier momento.
+              </li>
+              <li>
+                <strong>Cumplir obligaciones legales</strong>, por ejemplo fiscales y
+                contables. La base legal es el cumplimiento de una obligación legal.
+              </li>
+            </ul>
+            <p>No usamos tus datos para enviarte publicidad sin tu consentimiento expreso.</p>
+
+            <h2>4. Cuánto tiempo los conservamos</h2>
+            <p>
+              Conservamos los datos de las consultas mientras dure la conversación y un
+              máximo de un año después, salvo que se convierta en una operación de compra.
+              En ese caso los conservamos durante los plazos que exige la ley.
+            </p>
+
+            <h2>5. A quién se comunican</h2>
+            <p>
+              No cedemos tus datos a terceros salvo obligación legal. Algunos proveedores
+              tratan datos por cuenta nuestra para prestar el servicio: el alojamiento web,
+              el correo electrónico y, si nos escribes por WhatsApp, Meta Platforms. Este
+              último puede implicar transferencias internacionales amparadas en las
+              cláusulas contractuales tipo de la Comisión Europea o en el Marco de
+              Privacidad de Datos UE-EE. UU.
+            </p>
+
+            <h2>6. Tus derechos</h2>
+            <p>
+              Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición,
+              limitación del tratamiento y portabilidad escribiendo a
+              <a href="mailto:{{email}}">{{email}}</a>. Indica qué derecho quieres ejercer.
+              Te pediremos acreditar tu identidad si es necesario.
+            </p>
+            <p>
+              Si consideras que no hemos atendido correctamente tu solicitud, puedes
+              presentar una reclamación ante la
+              <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos</a>.
+            </p>
+
+            <h2>7. Menores de edad</h2>
+            <p>
+              Este sitio no está dirigido a menores de 14 años y no recogemos
+              conscientemente sus datos.
+            </p>
+
+            <h2>8. Seguridad</h2>
+            <p>
+              Aplicamos medidas técnicas y organizativas adecuadas para proteger tus datos
+              frente a pérdidas, accesos no autorizados o usos indebidos.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>
