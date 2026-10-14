@@ -105,6 +105,10 @@ module.exports = (_, argv = {}) => {
       assetModuleFilename: "assets/media/[name].[hash:8][ext]",
       clean: true
     },
+    performance: {
+      // Hero videos are large by nature and only load on the homepage.
+      assetFilter: (file) => !/\.(mp4|webm|map)$/.test(file)
+    },
     devtool: isProd ? "source-map" : "eval-cheap-module-source-map",
     devServer: {
       static: {

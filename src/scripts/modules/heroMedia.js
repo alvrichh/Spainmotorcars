@@ -1,33 +1,38 @@
 /**
  * Background video for the hero.
- * - Skipped entirely when the visitor prefers reduced motion (the poster stays).
+ * - Not played when the visitor prefers reduced motion or has data saving on;
+ *   the poster image stays instead.
  * - Paused while the hero is off screen to save battery and bandwidth.
  */
 export const initHeroMedia = () => {
-  const hero = document.querySelector(".hero");
-  const iframe = hero ? hero.querySelector(".hero__media iframe") : null;
+  const video = document.querySelector("[data-hero-video]");
 
-  if (!iframe) {
+  if (!video) {
     return;
   }
 
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    iframe.remove();
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const saveData = navigator.connection?.saveData === true;
+
+  if (reduceMotion || saveData) {
+    video.pause();
+    video.removeAttribute("autoplay");
+    video.querySelectorAll("source").forEach((source) => source.remove());
+    video.load();
     return;
   }
+
+  const play = () => video.play().catch(() => {});
 
   if (!("IntersectionObserver" in window)) {
+    play();
     return;
   }
 
-  const send = (method) => {
-    iframe.contentWindow?.postMessage(JSON.stringify({ method }), "https://player.vimeo.com");
-  };
-
   const observer = new IntersectionObserver(
-    ([entry]) => send(entry.isIntersecting ? "play" : "pause"),
+    ([entry]) => (entry.isIntersecting ? play() : video.pause()),
     { threshold: 0.05 }
   );
 
-  observer.observe(hero);
+  observer.observe(video.closest(".hero") || video);
 };
