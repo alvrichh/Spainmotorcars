@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spainmotorscars.com/sitemap.xml
+Sitemap: https://spainmotorcars.vercel.app/sitemap.xml

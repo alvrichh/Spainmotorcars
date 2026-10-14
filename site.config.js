@@ -3,6 +3,7 @@
  *
  * Es la única fuente de verdad para teléfono, email, redes y datos legales.
  * Cualquier página HTML puede usarlos escribiendo {{clave}}, por ejemplo {{phone}}.
+ * Los textos que cambian con el idioma están en src/i18n/strings.js.
  * Se sustituyen al compilar, así que tras cambiar algo basta con volver a ejecutar
  * `npm run dev` o `npm run build`.
  *
@@ -12,7 +13,7 @@
 module.exports = {
   // Marca
   brandName: "Spain Motorcars",
-  siteUrl: "https://spainmotorscars.com",
+  siteUrl: "https://spainmotorcars.vercel.app", // Cambiar al dominio propio cuando exista
 
   // Contacto
   email: "hola@spainmotorscars.com",
@@ -21,8 +22,6 @@ module.exports = {
   whatsappHref: "34600000000", // EJEMPLO: número para WhatsApp, sin "+" ni espacios
   instagramUrl: "https://www.instagram.com/", // EJEMPLO: URL del perfil real
   instagramHandle: "Instagram", // EJEMPLO: usuario real, por ejemplo "@usuario"
-  locations: "Madrid · Marbella · Atención a distancia",
-  hours: "Lunes a viernes, 10:00 a 19:00 · Sábados con cita",
 
   // Datos legales (Ley 34/2002, LSSI-CE, art. 10)
   legalName: "Spain Motorcars, S.L.", // EJEMPLO
