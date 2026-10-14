@@ -181,6 +181,12 @@
   color: var(--color-text-on-dark-soft);
 }
 
+.not-found p.not-found__alt {
+  margin-top: -12px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 .not-found__actions {
   display: flex;
   flex-wrap: wrap;
