@@ -9,7 +9,8 @@
     color 220ms ease;
 }
 
-.site-header.is-light {
+.site-header.is-light,
+.has-hero .site-header:not(.is-dark) {
   --header-color: rgba(255, 255, 255, 0.96);
   --header-line: rgba(255, 255, 255, 0.28);
   --header-line-strong: rgba(255, 255, 255, 0.38);
@@ -70,35 +71,27 @@
   line-height: 0;
 }
 
-.site-header__brand::after {
-  content: "";
-  position: absolute;
-  inset: 18% 10%;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 72%);
-  filter: blur(12px);
-  opacity: 0;
-  transition: opacity 220ms ease;
-  z-index: -1;
-}
-
-.site-header__brand img {
+.site-header__logo {
   width: 100%;
   height: auto;
-  opacity: 0.98;
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.16));
+  transition: opacity var(--duration-base) ease;
 }
 
-.site-header.is-light .site-header__brand::after {
+// Two logo versions are stacked: dark ink for light backgrounds, ivory for dark ones.
+.site-header__logo--light {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.site-header.is-light .site-header__logo--light,
+.has-hero .site-header:not(.is-dark) .site-header__logo--light {
   opacity: 1;
 }
 
-.site-header.is-dark .site-header__brand::after {
+.site-header.is-light .site-header__logo--dark,
+.has-hero .site-header:not(.is-dark) .site-header__logo--dark {
   opacity: 0;
-}
-
-.site-footer__brand img {
-  width: clamp(140px, 18vw, 178px);
 }
 
 .site-header__nav {
@@ -135,12 +128,23 @@
   transform: scaleX(1);
 }
 
-.site-header__instagram {
-  padding: 8px 14px;
+.site-header__cta {
+  padding: 9px 16px;
   border: 1px solid var(--header-line-strong);
   border-radius: 999px;
   background: var(--header-chip);
   backdrop-filter: blur(10px) saturate(120%);
+  transition:
+    background-color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.site-header__cta::after {
+  display: none;
+}
+
+.site-header__cta:hover {
+  border-color: currentColor;
 }
 
 .site-header__toggle {
@@ -231,7 +235,7 @@
     transform: translateY(0);
   }
 
-  .site-header__instagram {
+  .site-header__cta {
     justify-self: start;
   }
 }
