@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>Aviso legal · {{brandName}}</title>
+    <meta name="description" content="Aviso legal e información del titular del sitio web de {{brandName}}." />
+    <link rel="canonical" href="{{siteUrl}}/aviso-legal" />
+  </head>
+  <body>
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main" class="legal">
+        <div class="container legal__layout">
+          <header class="legal__header">
+            <p class="eyebrow">Legal</p>
+            <h1>Aviso legal</h1>
+            <p class="legal__updated">Última actualización: {{legalUpdated}}</p>
+          </header>
+
+          <div class="legal__body">
+            <h2>1. Datos del titular</h2>
+            <p>
+              En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad
+              de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos
+              del titular de este sitio web:
+            </p>
+            <dl class="legal__data">
+              <div><dt>Titular</dt><dd>{{legalName}}</dd></div>
+              <div><dt>Nombre comercial</dt><dd>{{brandName}}</dd></div>
+              <div><dt>NIF / CIF</dt><dd>{{taxId}}</dd></div>
+              <div><dt>Domicilio</dt><dd>{{legalAddress}}</dd></div>
+              <div><dt>Registro</dt><dd>{{registryData}}</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+              <div><dt>Teléfono</dt><dd><a href="tel:{{phoneHref}}">{{phone}}</a></dd></div>
+            </dl>
+
+            <h2>2. Objeto</h2>
+            <p>
+              Este sitio web tiene carácter informativo. Presenta la actividad de
+              {{brandName}} y los vehículos que tiene disponibles, y facilita el contacto con
+              la empresa. El acceso es gratuito y no requiere registro.
+            </p>
+
+            <h2>3. Información sobre los vehículos</h2>
+            <p>
+              Las características, kilometrajes, precios y disponibilidad de los vehículos
+              son orientativos y pueden cambiar sin previo aviso. No constituyen una oferta
+              vinculante. Las condiciones definitivas de cada operación se acuerdan por
+              escrito con el comprador antes de la venta.
+            </p>
+
+            <h2>4. Condiciones de uso</h2>
+            <p>
+              Quien accede a este sitio se compromete a hacer un uso adecuado de sus
+              contenidos y a no emplearlos para actividades ilícitas o contrarias a la buena
+              fe.
+            </p>
+
+            <h2>5. Propiedad intelectual e industrial</h2>
+            <p>
+              Los textos, imágenes, logotipos, diseño y código de este sitio pertenecen a
+              {{legalName}} o a terceros que han autorizado su uso. Queda prohibida su
+              reproducción, distribución o transformación sin autorización expresa. Las
+              marcas de los fabricantes de automóviles citadas pertenecen a sus respectivos
+              titulares y se mencionan solo para identificar los vehículos.
+            </p>
+
+            <h2>6. Responsabilidad</h2>
+            <p>
+              {{brandName}} no se responsabiliza de interrupciones del servicio, errores de
+              acceso ni del contenido de sitios web de terceros enlazados desde esta página,
+              como redes sociales o servicios de mensajería.
+            </p>
+
+            <h2>7. Créditos fotográficos</h2>
+            <p>
+              Las fotografías de esta web son imágenes de ejemplo con licencia libre. Las
+              que están en dominio público (CC0) proceden de Wikimedia Commons. Las
+              siguientes requieren atribución:
+            </p>
+            <ul class="legal__credits">
+              <li>
+                BMW Serie 3 Touring (E30), por rvandermaar.
+                <a href="https://www.flickr.com/photos/83468718@N06/48996305581" target="_blank" rel="noopener noreferrer">Original</a>,
+                licencia <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.
+                Recortada.
+              </li>
+              <li>
+                Sunbeam Talbot 90 Convertible, por Gareth1953 All Right Now.
+                <a href="https://www.flickr.com/photos/40837632@N05/9563669222" target="_blank" rel="noopener noreferrer">Original</a>,
+                licencia <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.
+                Recortada.
+              </li>
+            </ul>
+
+            <h2>8. Legislación aplicable</h2>
+            <p>
+              Este aviso legal se rige por la legislación española. Para cualquier
+              controversia, las partes se someten a los juzgados y tribunales que
+              correspondan conforme a la normativa vigente. Si el usuario tiene la condición
+              de consumidor, serán competentes los de su domicilio.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>

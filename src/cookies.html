@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>Política de cookies · {{brandName}}</title>
+    <meta name="description" content="Información sobre el uso de cookies en el sitio web de {{brandName}}." />
+    <link rel="canonical" href="{{siteUrl}}/cookies" />
+  </head>
+  <body>
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main" class="legal">
+        <div class="container legal__layout">
+          <header class="legal__header">
+            <p class="eyebrow">Legal</p>
+            <h1>Política de cookies</h1>
+            <p class="legal__updated">Última actualización: {{legalUpdated}}</p>
+          </header>
+
+          <div class="legal__body">
+            <p>
+              En cumplimiento del artículo 22.2 de la Ley 34/2002, de Servicios de la
+              Sociedad de la Información y de Comercio Electrónico (LSSI-CE), y del
+              Reglamento General de Protección de Datos, te explicamos qué cookies usa
+              este sitio web y cómo puedes gestionarlas.
+            </p>
+
+            <h2>1. Qué son las cookies</h2>
+            <p>
+              Las cookies son pequeños archivos de texto que un sitio web guarda en tu
+              navegador cuando lo visitas. Sirven para que la web funcione, para recordar
+              tus preferencias o para obtener información estadística sobre su uso.
+            </p>
+
+            <h2>2. Tipos de cookies que utilizamos</h2>
+            <ul>
+              <li>
+                <strong>Técnicas o necesarias.</strong> Permiten navegar por la web y
+                recordar tu elección sobre las cookies. No requieren consentimiento.
+              </li>
+              <li>
+                <strong>De análisis.</strong> Nos ayudan a saber cuántas personas visitan
+                la web y qué secciones consultan, de forma agregada. Solo se instalan si
+                las aceptas.
+              </li>
+              <li>
+                <strong>De terceros.</strong> Las instala el reproductor de vídeo de la
+                portada para funcionar correctamente.
+              </li>
+            </ul>
+
+            <h2>3. Relación de cookies</h2>
+            <div class="legal__table-wrap">
+              <table class="legal__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Cookie</th>
+                    <th scope="col">Titular</th>
+                    <th scope="col">Finalidad</th>
+                    <th scope="col">Duración</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>sm_cookie_consent</td>
+                    <td>{{brandName}}</td>
+                    <td>Recordar si has aceptado o rechazado las cookies.</td>
+                    <td>Persistente, 12 meses</td>
+                  </tr>
+                  <tr>
+                    <td>_ga</td>
+                    <td>Google</td>
+                    <td>Distinguir usuarios de forma anónima con fines estadísticos.</td>
+                    <td>2 años</td>
+                  </tr>
+                  <tr>
+                    <td>_ga_*</td>
+                    <td>Google</td>
+                    <td>Mantener el estado de la sesión de análisis.</td>
+                    <td>2 años</td>
+                  </tr>
+                  <tr>
+                    <td>vuid</td>
+                    <td>Vimeo</td>
+                    <td>Reproducir el vídeo de la portada y medir su visualización.</td>
+                    <td>2 años</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>4. Cómo aceptar, rechazar o cambiar tu elección</h2>
+            <p>
+              La primera vez que visitas la web te mostramos un aviso para que aceptes o
+              rechaces las cookies que no son necesarias. Rechazarlas no afecta a la
+              navegación.
+            </p>
+            <p>
+              Para cambiar tu elección, borra las cookies y los datos del sitio desde tu
+              navegador. El aviso volverá a aparecer en tu próxima visita.
+            </p>
+
+            <h2>5. Cómo gestionarlas desde el navegador</h2>
+            <p>
+              También puedes bloquear o eliminar las cookies desde la configuración de tu
+              navegador:
+            </p>
+            <ul>
+              <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+              <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+              <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+              <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+            </ul>
+
+            <h2>6. Transferencias internacionales</h2>
+            <p>
+              Algunos terceros, como Google o Vimeo, pueden tratar datos fuera del Espacio
+              Económico Europeo. Estas transferencias se amparan en el Marco de Privacidad
+              de Datos UE-EE. UU. o en las cláusulas contractuales tipo de la Comisión
+              Europea.
+            </p>
+
+            <h2>7. Actualizaciones</h2>
+            <p>
+              Podemos actualizar esta política cuando cambien las cookies que usamos. Te
+              recomendamos revisarla de vez en cuando. Para cualquier duda, escríbenos a
+              <a href="mailto:{{email}}">{{email}}</a>.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>
