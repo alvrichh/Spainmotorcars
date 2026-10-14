@@ -1,8 +1,8 @@
-<a class="skip-link" href="#main">Saltar al contenido</a>
+<a class="skip-link" href="#main">{{t.skip}}</a>
 
 <header class="site-header is-dark" data-header>
   <div class="container site-header__inner">
-    <a class="site-header__brand" href="/" aria-label="{{brandName}}, ir al inicio">
+    <a class="site-header__brand" href="{{t.home}}" aria-label="{{brandName}}, {{t.homeAria}}">
       <img
         class="site-header__logo site-header__logo--dark"
         src="./assets/images/logo-dark.png"
@@ -20,24 +20,51 @@
       />
     </a>
 
-    <button
-      class="site-header__toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="main-nav"
-      aria-label="Abrir menú"
-      data-nav-toggle
-    >
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="site-header__nav" id="main-nav" aria-label="Principal" data-nav-panel>
-      <a href="/#about">La casa</a>
-      <a href="/#inventory">Vehículos</a>
-      <a href="/#services">Servicios</a>
-      <a href="/#process">Proceso</a>
-      <a class="site-header__cta" href="/#contact">Concertar cita</a>
+    <nav class="site-header__nav" id="main-nav" aria-label="{{t.navLabel}}" data-nav-panel>
+      <a href="{{t.home}}#about">{{t.navAbout}}</a>
+      <a href="{{t.home}}#inventory">{{t.navInventory}}</a>
+      <a href="{{t.home}}#services">{{t.navServices}}</a>
+      <a href="{{t.home}}#process">{{t.navProcess}}</a>
+      <a class="site-header__cta" href="{{t.home}}#contact">{{t.navCta}}</a>
     </nav>
+
+    <div class="site-header__tools">
+      <nav class="lang-switch" aria-label="{{t.langLabel}}">
+        <a href="{{urlEs}}" hreflang="es" lang="es" {{esCurrent}}>ES</a>
+        <a href="{{urlEn}}" hreflang="en" lang="en" {{enCurrent}}>EN</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="{{t.themeDark}}"
+        data-theme-toggle
+        data-label-dark="{{t.themeDark}}"
+        data-label-light="{{t.themeLight}}"
+      >
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z" />
+        </svg>
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" />
+        </svg>
+      </button>
+
+      <button
+        class="site-header__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="{{t.menuOpen}}"
+        data-nav-toggle
+        data-label-open="{{t.menuOpen}}"
+        data-label-close="{{t.menuClose}}"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>

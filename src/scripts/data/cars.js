@@ -9,7 +9,8 @@ import volvoXc60 from "../../assets/images/cars/volvo-xc60.webp";
  * Inventario mostrado en la sección "Vehículos".
  *
  * Campos:
- * - price: número en euros, o un texto como "Consultar".
+ * - price: número en euros, o null para "Consultar" / "On request".
+ * - category, transmission, alt: texto, o { es, en } si cambia con el idioma.
  * - mileage: kilómetros.
  * - power: potencia en CV.
  * - status: "available" | "reserved" | "sold".
@@ -26,11 +27,14 @@ export const cars = [
     price: 42900,
     mileage: 98400,
     power: 245,
-    transmission: "Automático",
-    category: "Clásico",
+    transmission: { es: "Automático", en: "Automatic" },
+    category: { es: "Clásico", en: "Classic" },
     status: "available",
     image: mercedesSl,
-    alt: "Mercedes-Benz 500 SL R107 descapotable de color blanco"
+    alt: {
+      es: "Mercedes-Benz 500 SL R107 descapotable de color blanco",
+      en: "White Mercedes-Benz 500 SL R107 convertible"
+    }
   },
   {
     brand: "Porsche",
@@ -43,7 +47,10 @@ export const cars = [
     category: "SUV",
     status: "available",
     image: porscheMacan,
-    alt: "Porsche Macan Turbo de color negro en un showroom"
+    alt: {
+      es: "Porsche Macan Turbo de color negro en un showroom",
+      en: "Black Porsche Macan Turbo in a showroom"
+    }
   },
   {
     brand: "Audi",
@@ -56,7 +63,10 @@ export const cars = [
     category: "Sportback",
     status: "available",
     image: audiA5,
-    alt: "Audi A5 Sportback de color marrón aparcado sobre adoquines"
+    alt: {
+      es: "Audi A5 Sportback de color marrón aparcado sobre adoquines",
+      en: "Brown Audi A5 Sportback parked on cobblestones"
+    }
   },
   {
     brand: "BMW",
@@ -66,10 +76,13 @@ export const cars = [
     mileage: 168000,
     power: 170,
     transmission: "Manual",
-    category: "Clásico",
+    category: { es: "Clásico", en: "Classic" },
     status: "available",
     image: bmwE30,
-    alt: "BMW Serie 3 Touring E30 de color azul oscuro"
+    alt: {
+      es: "BMW Serie 3 Touring E30 de color azul oscuro",
+      en: "Dark blue BMW 3 Series Touring E30"
+    }
   },
   {
     brand: "Range Rover",
@@ -78,23 +91,29 @@ export const cars = [
     price: 46500,
     mileage: 58000,
     power: 300,
-    transmission: "Automático",
+    transmission: { es: "Automático", en: "Automatic" },
     category: "SUV",
     status: "reserved",
     image: rangeRoverVelar,
-    alt: "Range Rover Velar R-Dynamic de color gris en un concesionario"
+    alt: {
+      es: "Range Rover Velar R-Dynamic de color gris en un concesionario",
+      en: "Grey Range Rover Velar R-Dynamic in a dealership"
+    }
   },
   {
     brand: "Volvo",
     model: "XC60 D5 AWD Summum",
     year: 2010,
-    price: "Consultar",
+    price: null,
     mileage: 142000,
     power: 205,
     transmission: "Geartronic",
     category: "SUV",
     status: "available",
     image: volvoXc60,
-    alt: "Volvo XC60 de primera generación en color negro"
+    alt: {
+      es: "Volvo XC60 de primera generación en color negro",
+      en: "Black first-generation Volvo XC60"
+    }
   }
 ];

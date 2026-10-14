@@ -6,30 +6,65 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 const CONFIG_PATH = path.resolve(__dirname, "site.config.js");
+const STRINGS_PATH = path.resolve(__dirname, "src/i18n/strings.js");
 const PARTIALS_DIR = path.resolve(__dirname, "src/partials");
+const SRC_DIR = path.resolve(__dirname, "src");
 
-// Every page template lives directly in src/ so relative asset paths match.
+/**
+ * Pages and their translations. `es` and `en` are the public URLs of the
+ * Spanish and English versions, used for the language switcher and hreflang.
+ */
 const pages = [
-  { template: "./src/index.html", filename: "index.html" },
-  { template: "./src/aviso-legal.html", filename: "aviso-legal.html" },
-  { template: "./src/privacidad.html", filename: "privacidad.html" },
-  { template: "./src/cookies.html", filename: "cookies.html" },
-  { template: "./src/404.html", filename: "404.html" }
+  { template: "index.html", lang: "es", es: "/", en: "/en/" },
+  { template: "aviso-legal.html", lang: "es", es: "/aviso-legal", en: "/en/legal-notice" },
+  { template: "privacidad.html", lang: "es", es: "/privacidad", en: "/en/privacy" },
+  { template: "cookies.html", lang: "es", es: "/cookies", en: "/en/cookies" },
+  { template: "404.html", lang: "es", es: "/", en: "/en/" },
+  { template: "en/index.html", lang: "en", es: "/", en: "/en/" },
+  { template: "en/legal-notice.html", lang: "en", es: "/aviso-legal", en: "/en/legal-notice" },
+  { template: "en/privacy.html", lang: "en", es: "/privacidad", en: "/en/privacy" },
+  { template: "en/cookies.html", lang: "en", es: "/cookies", en: "/en/cookies" }
 ];
 
-const loadSiteConfig = () => {
-  delete require.cache[CONFIG_PATH];
-  return require(CONFIG_PATH);
+const pageByTemplate = new Map(pages.map((page) => [path.join(SRC_DIR, page.template), page]));
+
+const fresh = (file) => {
+  delete require.cache[file];
+  return require(file);
+};
+
+// Variables available to every template for a given page.
+const pageVariables = (page) => {
+  const site = fresh(CONFIG_PATH);
+  const strings = fresh(STRINGS_PATH)[page.lang];
+  const vars = { ...site, lang: page.lang, urlEs: page.es, urlEn: page.en };
+
+  // Language switcher state: mark the current language.
+  vars.esCurrent = page.lang === "es" ? 'aria-current="true"' : "";
+  vars.enCurrent = page.lang === "en" ? 'aria-current="true"' : "";
+
+  Object.entries(strings).forEach(([key, value]) => {
+    vars[`t.${key}`] = value;
+  });
+  return vars;
 };
 
 /**
  * html-loader preprocessor:
- *  - {{> name}}  inserts src/partials/name.html
- *  - {{key}}     inserts the value of `key` from site.config.js
+ *  - {{> name}}   inserts src/partials/name.html
+ *  - {{key}}      inserts a value from site.config.js or the page variables
+ *  - {{t.key}}    inserts a string from src/i18n/strings.js in the page language
+ * Asset paths are written as "./assets/..." everywhere and rewritten for pages
+ * that live in a subfolder (src/en/).
  */
 const preprocessHtml = (content, loaderContext) => {
-  const site = loadSiteConfig();
+  const page = pageByTemplate.get(loaderContext.resourcePath);
+  if (!page) {
+    throw new Error(`No page entry for ${loaderContext.resourcePath}`);
+  }
   loaderContext.addDependency(CONFIG_PATH);
+  loaderContext.addDependency(STRINGS_PATH);
+  const vars = pageVariables(page);
 
   // Partials may include other partials, so expand until none are left.
   const expandPartials = (html, depth = 0) => {
@@ -44,20 +79,22 @@ const preprocessHtml = (content, loaderContext) => {
     return expanded === html ? html : expandPartials(expanded, depth + 1);
   };
 
-  const withPartials = expandPartials(content);
-
-  return withPartials.replace(/\{\{\s*(\w+)\s*\}\}/g, (match, key) => {
-    if (!(key in site)) {
-      loaderContext.emitWarning(new Error(`Unknown site.config key: ${key}`));
+  const withVars = expandPartials(content).replace(/\{\{\s*([\w.]+)\s*\}\}/g, (match, key) => {
+    if (!(key in vars)) {
+      loaderContext.emitWarning(new Error(`Unknown template key: ${key}`));
       return match;
     }
-    return site[key];
+    return vars[key];
   });
+
+  const toSrc = path.relative(path.dirname(loaderContext.resourcePath), SRC_DIR);
+  const assetPrefix = toSrc ? `${toSrc.split(path.sep).join("/")}/assets/` : "./assets/";
+  return withVars.replace(/(["'(])\.\/assets\//g, `$1${assetPrefix}`);
 };
 
 module.exports = (_, argv = {}) => {
   const isProd = argv.mode === "production";
-  const site = loadSiteConfig();
+  const site = fresh(CONFIG_PATH);
 
   return {
     entry: "./src/index.js",
@@ -80,11 +117,11 @@ module.exports = (_, argv = {}) => {
         // Mirror Vercel's cleanUrls locally: /aviso-legal -> /aviso-legal.html
         rewrites: [
           ...pages
-            .filter((page) => page.filename !== "index.html")
-            .map((page) => ({
-              from: new RegExp(`^/${page.filename.replace(".html", "")}/?$`),
-              to: `/${page.filename}`
-            })),
+            .filter((page) => page.template !== "index.html")
+            .map((page) => {
+              const clean = page.template.replace(/(\/?index)?\.html$/, "");
+              return { from: new RegExp(`^/${clean}/?$`), to: `/${page.template}` };
+            }),
           { from: /./, to: "/404.html" }
         ]
       },
@@ -127,7 +164,8 @@ module.exports = (_, argv = {}) => {
       ...pages.map(
         (page) =>
           new HtmlWebpackPlugin({
-            ...page,
+            template: `./src/${page.template}`,
+            filename: page.template,
             scriptLoading: "defer"
           })
       ),

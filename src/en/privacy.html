@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>Privacy policy · {{brandName}}</title>
+    <meta name="description" content="How {{brandName}} handles the personal data of people who contact us." />
+    <link rel="canonical" href="{{siteUrl}}/en/privacy" />
+  </head>
+  <body>
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main" class="legal">
+        <div class="container legal__layout">
+          <header class="legal__header">
+            <p class="eyebrow">Legal</p>
+            <h1>Privacy policy</h1>
+            <p class="legal__updated">Last updated: 14 October 2026</p>
+          </header>
+
+          <div class="legal__body">
+            <p>
+              This policy explains how we process your personal data under Regulation (EU)
+              2016/679 (GDPR) and Spanish Organic Law 3/2018 (LOPDGDD). This is a
+              translation provided for convenience. If there is any discrepancy, the
+              <a href="/privacidad">Spanish version</a> prevails.
+            </p>
+
+            <h2>1. Data controller</h2>
+            <dl class="legal__data">
+              <div><dt>Controller</dt><dd>{{legalName}}</dd></div>
+              <div><dt>Tax ID</dt><dd>{{taxId}}</dd></div>
+              <div><dt>Address</dt><dd>{{legalAddress}}</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+            </dl>
+
+            <h2>2. What data we process</h2>
+            <p>
+              This site has no forms and does not create user profiles. We only process the
+              data you give us when you email us, message us on WhatsApp or call us: usually
+              your name, phone number, email and details about the car you are interested in.
+            </p>
+            <p>
+              Browsing also generates technical data such as your IP address or browser type.
+              If you accept analytics cookies, usage statistics are collected too. See the
+              <a href="/en/cookies">cookie policy</a> for details.
+            </p>
+
+            <h2>3. Why we use it and on what legal basis</h2>
+            <ul>
+              <li>
+                <strong>To answer your enquiries</strong> and arrange viewings. The legal
+                basis is your consent when contacting us and steps taken at your request
+                before entering into a contract.
+              </li>
+              <li>
+                <strong>To manage the sale</strong> if you buy a car. The legal basis is the
+                performance of the contract.
+              </li>
+              <li>
+                <strong>To analyse how the site is used</strong> and improve it, only if you
+                accept analytics cookies. The legal basis is your consent, which you can
+                withdraw at any time.
+              </li>
+              <li>
+                <strong>To meet legal obligations</strong>, such as tax and accounting. The
+                legal basis is compliance with a legal obligation.
+              </li>
+            </ul>
+            <p>We do not send you marketing without your express consent.</p>
+
+            <h2>4. How long we keep it</h2>
+            <p>
+              We keep enquiry data for as long as the conversation lasts and up to one year
+              afterwards, unless it leads to a purchase. In that case we keep it for the
+              periods required by law.
+            </p>
+
+            <h2>5. Who we share it with</h2>
+            <p>
+              We do not share your data with third parties unless required by law. Some
+              providers process data on our behalf to deliver the service: web hosting,
+              email and, if you message us on WhatsApp, Meta Platforms. The latter may
+              involve international transfers covered by the European Commission's standard
+              contractual clauses or the EU-US Data Privacy Framework.
+            </p>
+
+            <h2>6. Your rights</h2>
+            <p>
+              You can exercise your rights of access, rectification, erasure, objection,
+              restriction and portability by writing to <a href="mailto:{{email}}">{{email}}</a>.
+              Tell us which right you want to exercise. We may ask you to verify your
+              identity.
+            </p>
+            <p>
+              If you believe we have not handled your request properly, you can complain to
+              the
+              <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">Spanish Data Protection Agency (AEPD)</a>.
+            </p>
+
+            <h2>7. Children</h2>
+            <p>This site is not aimed at children under 14 and we do not knowingly collect their data.</p>
+
+            <h2>8. Security</h2>
+            <p>
+              We apply appropriate technical and organisational measures to protect your data
+              against loss, unauthorised access or misuse.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>
