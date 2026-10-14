@@ -2,7 +2,7 @@
   <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__about">
-        <a class="site-footer__brand" href="/" aria-label="{{brandName}}, ir al inicio">
+        <a class="site-footer__brand" href="{{t.home}}" aria-label="{{brandName}}, {{t.homeAria}}">
           <img
             src="./assets/images/logo-light.png"
             alt="{{brandName}}"
@@ -11,19 +11,19 @@
             loading="lazy"
           />
         </a>
-        <p>Coches premium y clásicos con historia, seleccionados uno a uno.</p>
+        <p>{{t.footerTagline}}</p>
       </div>
 
-      <nav class="site-footer__col" aria-label="Secciones">
-        <h2>Explorar</h2>
-        <a href="/#about">La casa</a>
-        <a href="/#inventory">Vehículos</a>
-        <a href="/#services">Servicios</a>
-        <a href="/#process">Proceso</a>
+      <nav class="site-footer__col" aria-label="{{t.footerSections}}">
+        <h2>{{t.footerExplore}}</h2>
+        <a href="{{t.home}}#about">{{t.navAbout}}</a>
+        <a href="{{t.home}}#inventory">{{t.navInventory}}</a>
+        <a href="{{t.home}}#services">{{t.navServices}}</a>
+        <a href="{{t.home}}#process">{{t.navProcess}}</a>
       </nav>
 
       <div class="site-footer__col">
-        <h2>Contacto</h2>
+        <h2>{{t.footerContact}}</h2>
         <a href="mailto:{{email}}">{{email}}</a>
         <a href="tel:{{phoneHref}}">{{phone}}</a>
         <a href="https://wa.me/{{whatsappHref}}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -32,11 +32,11 @@
     </div>
 
     <div class="site-footer__bottom">
-      <p>© <span data-year>2026</span> {{brandName}}. Todos los derechos reservados.</p>
+      <p>© <span data-year>2026</span> {{brandName}}. {{t.footerRights}}</p>
       <nav class="site-footer__legal" aria-label="Legal">
-        <a href="/aviso-legal">Aviso legal</a>
-        <a href="/privacidad">Privacidad</a>
-        <a href="/cookies">Cookies</a>
+        <a href="{{t.urlLegal}}">{{t.legalNotice}}</a>
+        <a href="{{t.urlPrivacy}}">{{t.privacy}}</a>
+        <a href="{{t.urlCookies}}">{{t.cookies}}</a>
       </nav>
     </div>
   </div>

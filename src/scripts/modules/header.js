@@ -14,7 +14,7 @@ export const initHeader = () => {
   const setOpen = (open) => {
     header.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    toggle.setAttribute("aria-label", open ? toggle.dataset.labelClose : toggle.dataset.labelOpen);
   };
 
   // The header switches to light text whenever it sits over a dark section.

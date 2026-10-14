@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>Cookie policy · {{brandName}}</title>
+    <meta name="description" content="How the {{brandName}} website uses cookies." />
+    <link rel="canonical" href="{{siteUrl}}/en/cookies" />
+  </head>
+  <body>
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main" class="legal">
+        <div class="container legal__layout">
+          <header class="legal__header">
+            <p class="eyebrow">Legal</p>
+            <h1>Cookie policy</h1>
+            <p class="legal__updated">Last updated: 14 October 2026</p>
+          </header>
+
+          <div class="legal__body">
+            <p>
+              In accordance with article 22.2 of Spanish Law 34/2002 (LSSI-CE) and the GDPR,
+              this page explains which cookies this website uses and how you can manage
+              them. This is a translation provided for convenience. If there is any
+              discrepancy, the <a href="/cookies">Spanish version</a> prevails.
+            </p>
+
+            <h2>1. What cookies are</h2>
+            <p>
+              Cookies are small text files that a website stores in your browser when you
+              visit it. They make the site work, remember your preferences or provide usage
+              statistics.
+            </p>
+
+            <h2>2. What this site uses</h2>
+            <ul>
+              <li>
+                <strong>Technical and preference storage.</strong> We store your cookie
+                choice and your light or dark mode preference in your browser. It does not
+                identify you and does not require consent.
+              </li>
+              <li>
+                <strong>Analytics.</strong> We do not currently use analytics cookies. If we
+                add them, they will only run if you accept them in the notice, and we will
+                list them here.
+              </li>
+              <li>
+                <strong>Homepage video.</strong> It plays through Vimeo in "Do Not Track"
+                mode, which sets no tracking cookies.
+              </li>
+            </ul>
+
+            <h2>3. Items stored</h2>
+            <div class="legal__table-wrap">
+              <table class="legal__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Purpose</th>
+                    <th scope="col">Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>sm_cookie_consent</td>
+                    <td>{{brandName}}</td>
+                    <td>Remember whether you accepted or rejected cookies.</td>
+                    <td>Until you clear site data</td>
+                  </tr>
+                  <tr>
+                    <td>sm_theme</td>
+                    <td>{{brandName}}</td>
+                    <td>Remember whether you prefer light or dark mode.</td>
+                    <td>Until you clear site data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>4. Accepting, rejecting or changing your choice</h2>
+            <p>
+              On your first visit we show a notice so you can accept or reject non-essential
+              cookies. Rejecting them does not affect browsing.
+            </p>
+            <p>
+              To change your choice, clear the cookies and site data in your browser. The
+              notice will appear again on your next visit.
+            </p>
+
+            <h2>5. Managing cookies in your browser</h2>
+            <p>You can also block or delete cookies in your browser settings:</p>
+            <ul>
+              <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+              <li><a href="https://support.mozilla.org/kb/clear-cookies-and-site-data-firefox" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+              <li><a href="https://support.apple.com/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+              <li><a href="https://support.microsoft.com/microsoft-edge" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+            </ul>
+
+            <h2>6. International transfers</h2>
+            <p>
+              Vimeo, which serves the homepage video, may process technical data outside the
+              European Economic Area. These transfers are covered by the EU-US Data Privacy
+              Framework or the European Commission's standard contractual clauses.
+            </p>
+
+            <h2>7. Updates</h2>
+            <p>
+              We may update this policy when the cookies we use change. For any questions,
+              write to <a href="mailto:{{email}}">{{email}}</a>.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>

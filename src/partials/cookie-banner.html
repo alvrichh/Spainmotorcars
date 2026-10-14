@@ -2,20 +2,20 @@
   class="cookie-banner"
   role="dialog"
   aria-live="polite"
-  aria-label="Aviso de cookies"
+  aria-label="{{t.cookieAria}}"
   data-cookie-banner
   hidden
 >
   <p class="cookie-banner__text">
-    Usamos cookies técnicas y, con tu permiso, de análisis para mejorar la web.
-    <a href="/cookies">Más información</a>
+    {{t.cookieText}}
+    <a href="{{t.urlCookies}}">{{t.cookieMore}}</a>
   </p>
   <div class="cookie-banner__actions">
     <button class="cookie-banner__button cookie-banner__button--ghost" type="button" data-cookie-choice="rejected">
-      Rechazar
+      {{t.cookieReject}}
     </button>
     <button class="cookie-banner__button" type="button" data-cookie-choice="accepted">
-      Aceptar
+      {{t.cookieAccept}}
     </button>
   </div>
 </div>

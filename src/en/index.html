@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>{{brandName}} · Selected premium and classic cars in Spain</title>
+    <meta
+      name="description"
+      content="{{brandName}}: premium everyday cars and classics with a story, selected one by one in Spain. Inspected cars, clear history and personal service."
+    />
+    <link rel="canonical" href="{{siteUrl}}/en/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:site_name" content="{{brandName}}" />
+    <meta property="og:url" content="{{siteUrl}}/en/" />
+    <meta property="og:title" content="{{brandName}} · Selected premium cars" />
+    <meta
+      property="og:description"
+      content="Premium everyday cars and classics with a story, selected one by one. Personal service in Madrid, Marbella and remotely."
+    />
+    <meta property="og:image" content="{{siteUrl}}/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{brandName}}, selected premium cars" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{siteUrl}}/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoDealer",
+        "name": "{{brandName}}",
+        "url": "{{siteUrl}}/en/",
+        "logo": "{{siteUrl}}/og-image.png",
+        "image": "{{siteUrl}}/og-image.png",
+        "email": "{{email}}",
+        "telephone": "{{phoneHref}}",
+        "areaServed": "ES",
+        "address": { "@type": "PostalAddress", "addressCountry": "ES", "addressLocality": "Madrid" },
+        "sameAs": ["{{instagramUrl}}"]
+      }
+    </script>
+  </head>
+  <body class="has-hero">
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main">
+        <section class="hero" id="home" data-header-contrast>
+          <div class="hero__media" aria-hidden="true">
+            <div class="hero__poster"></div>
+            <iframe
+              src="https://player.vimeo.com/video/1012097674?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1"
+              title="Background video"
+              loading="lazy"
+              tabindex="-1"
+              allow="autoplay; fullscreen"
+            ></iframe>
+          </div>
+          <div class="hero__overlay"></div>
+
+          <div class="container hero__content" data-reveal>
+            <p class="eyebrow eyebrow--light">Premium cars · Spain</p>
+            <h1>
+              Cars with character,
+              <span>chosen one by one.</span>
+            </h1>
+            <p class="hero__lead">
+              Saloons, estates, SUVs and the occasional classic with a story. Premium cars
+              to enjoy every day, with a verifiable history and the transparency a good
+              purchase deserves.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--light" href="#inventory">View cars</a>
+              <a class="button button--ghost" href="#contact">Book a viewing</a>
+            </div>
+
+            <ul class="hero__metrics" aria-label="What defines us">
+              <li>
+                <strong>A short selection</strong>
+                <span>Few cars, each with presence and a clear history.</span>
+              </li>
+              <li>
+                <strong>Personal service</strong>
+                <span>One point of contact from the first call to handover.</span>
+              </li>
+              <li>
+                <strong>Bespoke search</strong>
+                <span>We find the exact specification you have in mind.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="about section" id="about">
+          <div class="container about__layout">
+            <div class="section-heading" data-reveal>
+              <p class="eyebrow">About</p>
+              <h2>Judgement over volume.</h2>
+            </div>
+
+            <div class="about__grid">
+              <div class="about__story" data-reveal>
+                <p class="about__lead">
+                  {{brandName}} exists for people who want a special car and the peace of
+                  mind of knowing exactly what they are buying.
+                </p>
+                <p>
+                  We are not a marketplace or a conventional dealership. We work with a short
+                  selection of cars we know inside out: where they come from, how they have
+                  been maintained and their real condition. If we would not buy it
+                  ourselves, we do not offer it.
+                </p>
+
+                <div class="about__notes">
+                  <article>
+                    <span>01</span>
+                    <div>
+                      <h3>Careful selection</h3>
+                      <p>Only cars with a desirable specification and documented history.</p>
+                    </div>
+                  </article>
+                  <article>
+                    <span>02</span>
+                    <div>
+                      <h3>Full transparency</h3>
+                      <p>Real photos, a detailed condition report and clear answers.</p>
+                    </div>
+                  </article>
+                  <article>
+                    <span>03</span>
+                    <div>
+                      <h3>By your side</h3>
+                      <p>We accompany you through the viewing, the paperwork and handover.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="about__visuals" data-reveal>
+                <figure class="about__frame about__frame--tall">
+                  <img
+                    src="./assets/images/photos/about-classic.webp"
+                    alt="Green classic Sunbeam Talbot 90 convertible parked on a street"
+                    width="900"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="about__frame about__frame--detail">
+                  <img
+                    src="./assets/images/photos/about-detail.webp"
+                    alt="Flush door handle detail on a Range Rover Velar"
+                    width="640"
+                    height="800"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="inventory section" id="inventory">
+          <div class="container inventory__intro" data-reveal>
+            <div class="section-heading">
+              <p class="eyebrow">Available now</p>
+              <h2>Current selection.</h2>
+            </div>
+            <p class="inventory__copy">
+              Every car has been inspected and can be viewed by appointment. Looking for
+              something that is not here? Tell us and we will find it.
+            </p>
+          </div>
+
+          <div class="container">
+            <div class="inventory__grid" data-cars-grid></div>
+          </div>
+        </section>
+
+        <section class="services section" id="services" data-header-contrast>
+          <div class="container">
+            <div class="services__intro" data-reveal>
+              <div class="section-heading">
+                <p class="eyebrow eyebrow--light">Services</p>
+                <h2>More than selling cars.</h2>
+              </div>
+              <p class="services__copy">
+                We take care of everything around buying a premium car, so all you have to
+                do is enjoy it.
+              </p>
+            </div>
+
+            <div class="services__grid">
+              <article class="service-card" data-reveal style="--card-index: 0">
+                <span class="service-card__index">01</span>
+                <h3>Selected cars for sale</h3>
+                <p>Inspected cars with a verifiable history and an honest description.</p>
+              </article>
+              <article class="service-card" data-reveal style="--card-index: 1">
+                <span class="service-card__index">02</span>
+                <h3>Search on request</h3>
+                <p>Give us the specification and we source the right car in Spain and Europe.</p>
+              </article>
+              <article class="service-card" data-reveal style="--card-index: 2">
+                <span class="service-card__index">03</span>
+                <h3>Paperwork handled</h3>
+                <p>Transfer, registration and import managed from start to finish.</p>
+              </article>
+              <article class="service-card" data-reveal style="--card-index: 3">
+                <span class="service-card__index">04</span>
+                <h3>Home delivery</h3>
+                <p>We bring the car to you, in Madrid, Marbella or anywhere in Spain.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="process section" id="process">
+          <div class="container process__layout">
+            <div class="section-heading" data-reveal>
+              <p class="eyebrow">Process</p>
+              <h2>How we work with you.</h2>
+            </div>
+
+            <ol class="process__steps">
+              <li data-reveal style="--card-index: 0">
+                <span>Step 01</span>
+                <h3>Conversation</h3>
+                <p>We listen to what you are looking for, how you will use the car and your timing.</p>
+              </li>
+              <li data-reveal style="--card-index: 1">
+                <span>Step 02</span>
+                <h3>Proposal</h3>
+                <p>We present specific options with clear history, condition and price.</p>
+              </li>
+              <li data-reveal style="--card-index: 2">
+                <span>Step 03</span>
+                <h3>Private viewing</h3>
+                <p>See and drive the car calmly, by appointment and with no sales pressure.</p>
+              </li>
+              <li data-reveal style="--card-index: 3">
+                <span>Step 04</span>
+                <h3>Handover</h3>
+                <p>We handle the paperwork and hand over the car ready to drive.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="contact section" id="contact">
+          <div class="container contact__grid">
+            <div class="contact__copy" data-reveal>
+              <p class="eyebrow">Contact</p>
+              <h2>Let's talk about your next car.</h2>
+              <p>
+                Write or call us to ask about a car, book a viewing or commission a search.
+                We reply within 24 working hours.
+              </p>
+            </div>
+
+            <div class="contact__panel" data-reveal>
+              <dl class="contact__list">
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:{{email}}">{{email}}</a></dd>
+                </div>
+                <div>
+                  <dt>Phone</dt>
+                  <dd><a href="tel:{{phoneHref}}">{{phone}}</a></dd>
+                </div>
+                <div>
+                  <dt>Where</dt>
+                  <dd>{{t.locations}}</dd>
+                </div>
+                <div>
+                  <dt>Hours</dt>
+                  <dd>{{t.hours}}</dd>
+                </div>
+              </dl>
+
+              <div class="contact__actions">
+                <a
+                  class="button button--solid"
+                  href="https://wa.me/{{whatsappHref}}?text=Hello%2C%20I%27d%20like%20to%20book%20a%20viewing."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Message on WhatsApp
+                </a>
+                <a
+                  class="button button--outline"
+                  href="mailto:{{email}}?subject=Viewing%20request"
+                >
+                  Send an email
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>

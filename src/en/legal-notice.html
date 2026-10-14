@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>Legal notice · {{brandName}}</title>
+    <meta name="description" content="Legal notice and owner details for the {{brandName}} website." />
+    <link rel="canonical" href="{{siteUrl}}/en/legal-notice" />
+  </head>
+  <body>
+    {{> header}}
+
+    <div class="page-shell">
+      <main id="main" class="legal">
+        <div class="container legal__layout">
+          <header class="legal__header">
+            <p class="eyebrow">Legal</p>
+            <h1>Legal notice</h1>
+            <p class="legal__updated">Last updated: 14 October 2026</p>
+          </header>
+
+          <div class="legal__body">
+            <p>
+              This is a translation provided for convenience. If there is any discrepancy,
+              the <a href="/aviso-legal">Spanish version</a> prevails.
+            </p>
+
+            <h2>1. Owner details</h2>
+            <p>
+              In accordance with article 10 of Spanish Law 34/2002 on Information Society
+              Services and Electronic Commerce (LSSI-CE), the owner of this website is:
+            </p>
+            <dl class="legal__data">
+              <div><dt>Owner</dt><dd>{{legalName}}</dd></div>
+              <div><dt>Trading name</dt><dd>{{brandName}}</dd></div>
+              <div><dt>Tax ID</dt><dd>{{taxId}}</dd></div>
+              <div><dt>Address</dt><dd>{{legalAddress}}</dd></div>
+              <div><dt>Registry</dt><dd>{{registryData}}</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+              <div><dt>Phone</dt><dd><a href="tel:{{phoneHref}}">{{phone}}</a></dd></div>
+            </dl>
+
+            <h2>2. Purpose</h2>
+            <p>
+              This website is for information. It presents the activity of {{brandName}} and
+              the cars it has available, and makes it easy to get in touch. Access is free
+              and requires no registration.
+            </p>
+
+            <h2>3. Information about the cars</h2>
+            <p>
+              Specifications, mileage, prices and availability are indicative and may change
+              without notice. They are not a binding offer. The final terms of each sale are
+              agreed in writing with the buyer before the sale.
+            </p>
+
+            <h2>4. Terms of use</h2>
+            <p>
+              Visitors agree to use the content of this site appropriately and not for
+              unlawful purposes or in bad faith.
+            </p>
+
+            <h2>5. Intellectual and industrial property</h2>
+            <p>
+              The text, images, logos, design and code of this site belong to {{legalName}}
+              or to third parties who have authorised their use. Reproduction, distribution
+              or modification without express permission is prohibited. Car manufacturers'
+              trademarks belong to their owners and are mentioned only to identify the cars.
+            </p>
+
+            <h2>6. Liability</h2>
+            <p>
+              {{brandName}} is not responsible for service interruptions, access errors or the
+              content of third-party websites linked from this site, such as social networks
+              or messaging services.
+            </p>
+
+            <h2>7. Photo credits</h2>
+            <p>
+              The photos on this website are openly licensed sample images. Public domain
+              (CC0) photos come from Wikimedia Commons. The following require attribution:
+            </p>
+            <ul class="legal__credits">
+              <li>
+                BMW 3 Series Touring (E30), by rvandermaar.
+                <a href="https://www.flickr.com/photos/83468718@N06/48996305581" target="_blank" rel="noopener noreferrer">Original</a>,
+                licensed <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.
+                Cropped.
+              </li>
+              <li>
+                Sunbeam Talbot 90 Convertible, by Gareth1953 All Right Now.
+                <a href="https://www.flickr.com/photos/40837632@N05/9563669222" target="_blank" rel="noopener noreferrer">Original</a>,
+                licensed <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.
+                Cropped.
+              </li>
+            </ul>
+
+            <h2>8. Governing law</h2>
+            <p>
+              This legal notice is governed by Spanish law. Any dispute will be submitted to
+              the competent courts under current regulations. If the user is a consumer, the
+              courts of their place of residence will have jurisdiction.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
+    </div>
+  </body>
+</html>
