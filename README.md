@@ -173,7 +173,7 @@ Los tokens de diseño están en [`src/styles/base/_variables.scss`](src/styles/b
 - **Enlace "Saltar al contenido"** y foco visible en todos los elementos interactivos.
 - **Menú móvil** con `aria-expanded` y cierre con la tecla Escape.
 - **Movimiento reducido:** si el visitante lo pide, se desactivan las animaciones y el vídeo del hero.
-- **Vídeo del hero** en pausa cuando sale de pantalla.
+- **Vídeo del hero** alojado en la propia web, en versión ligera para móvil y en pausa cuando sale de pantalla. No se carga con movimiento reducido o ahorro de datos.
 - **Imágenes** con carga diferida y dimensiones reservadas para evitar saltos de maquetación.
 - **Assets con hash** en el nombre para que la caché sea segura en producción.
 
@@ -194,6 +194,7 @@ Rellena en [`site.config.js`](site.config.js) los valores marcados como `EJEMPLO
 Revisa también:
 
 - [ ] Kilometrajes, precios y fotos reales de cada vehículo en `cars.js`.
+- [ ] Vídeo del hero propio. El actual es un clip libre de Mixkit (`src/assets/videos/`), en versiones de 720p para escritorio y 360p para móvil. Al sustituirlo, actualiza también `photos/hero-poster.webp` con su primer fotograma.
 - [ ] Horario y ubicaciones, si no coinciden con los actuales.
 - [ ] Que el dominio de `siteUrl` sea el definitivo. Si cambia, actualiza también `public/robots.txt` y `public/sitemap.xml`.
 - [ ] Que un profesional revise los textos legales. Son una base adaptada al funcionamiento real de la web, no asesoramiento jurídico.
