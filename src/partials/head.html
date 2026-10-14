@@ -2,5 +2,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0e0e0e" />
 <meta name="format-detection" content="telephone=no" />
+<script>
+  // Apply the saved or system theme before first paint to avoid a flash.
+  (function () {
+    try {
+      var theme = localStorage.getItem("sm_theme");
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (error) {}
+  })();
+</script>
 <link rel="icon" href="./assets/images/apple-touch-icon.png" type="image/png" />
 <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+<link rel="alternate" hreflang="es" href="{{siteUrl}}{{urlEs}}" />
+<link rel="alternate" hreflang="en" href="{{siteUrl}}{{urlEn}}" />
+<link rel="alternate" hreflang="x-default" href="{{siteUrl}}{{urlEs}}" />

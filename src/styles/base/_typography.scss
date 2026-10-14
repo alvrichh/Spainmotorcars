@@ -127,12 +127,12 @@ h3 {
 }
 
 .button--solid {
-  background: var(--color-ink);
-  color: var(--color-text-on-dark);
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
 }
 
 .button--solid:hover {
-  background: var(--color-ink-soft);
+  background: var(--color-button-bg-hover);
 }
 
 .button--light {
