@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__about">
+        <a class="site-footer__brand" href="/" aria-label="{{brandName}}, ir al inicio">
+          <img
+            src="./assets/images/logo-light.png"
+            alt="{{brandName}}"
+            width="480"
+            height="235"
+            loading="lazy"
+          />
+        </a>
+        <p>Coches premium y clásicos con historia, seleccionados uno a uno.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Secciones">
+        <h2>Explorar</h2>
+        <a href="/#about">La casa</a>
+        <a href="/#inventory">Vehículos</a>
+        <a href="/#services">Servicios</a>
+        <a href="/#process">Proceso</a>
+      </nav>
+
+      <div class="site-footer__col">
+        <h2>Contacto</h2>
+        <a href="mailto:{{email}}">{{email}}</a>
+        <a href="tel:{{phoneHref}}">{{phone}}</a>
+        <a href="https://wa.me/{{whatsappHref}}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="{{instagramUrl}}" target="_blank" rel="noopener noreferrer">{{instagramHandle}}</a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© <span data-year>2026</span> {{brandName}}. Todos los derechos reservados.</p>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/privacidad">Privacidad</a>
+        <a href="/cookies">Cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+{{> cookie-banner}}
