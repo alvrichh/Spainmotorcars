@@ -11,9 +11,11 @@ import { initCookieBanner } from "./scripts/modules/cookieBanner";
 import { initHeader } from "./scripts/modules/header";
 import { initHeroMedia } from "./scripts/modules/heroMedia";
 import { initReveal } from "./scripts/modules/reveal";
+import { initTheme } from "./scripts/modules/theme";
 import { syncYear } from "./scripts/modules/year";
 
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
   renderCars();
   initHeader();
   initHeroMedia();

@@ -76,7 +76,7 @@
 
 .car-card__tag {
   left: 16px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-tag-bg);
   backdrop-filter: blur(8px);
 }
 

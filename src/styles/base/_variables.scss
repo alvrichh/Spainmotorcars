@@ -18,6 +18,12 @@
   --color-accent: #d8c6b2;
   --color-accent-deep: #8f6b47;
   --color-focus: #b38d67;
+  --color-button-bg: var(--color-ink);
+  --color-button-bg-hover: var(--color-ink-soft);
+  --color-button-text: var(--color-text-on-dark);
+  --color-tag-bg: rgba(255, 255, 255, 0.9);
+  --color-frame: #ffffff;
+  color-scheme: light;
 
   // Elevation
   --shadow-soft: 0 30px 70px rgba(17, 17, 17, 0.08);
@@ -42,4 +48,41 @@
   --duration-fast: 200ms;
   --duration-base: 320ms;
   --duration-slow: 720ms;
+}
+
+// Dark theme. Applied when the visitor picks it, or by system preference when
+// no explicit choice exists (the inline script in partials/head.html sets
+// data-theme before first paint; the media query covers visitors without JS).
+
+@mixin dark-tokens {
+  --color-bg: #121110;
+  --color-surface: #191816;
+  --color-surface-strong: #23211e;
+  --color-ink: #0a0909;
+  --color-ink-soft: #1d1c1a;
+  --color-line: rgba(245, 242, 236, 0.1);
+  --color-line-strong: rgba(245, 242, 236, 0.2);
+  --color-text: #f2efe9;
+  --color-text-soft: rgba(242, 239, 233, 0.66);
+  --color-accent-deep: #c9a57f;
+  --color-focus: #d8c6b2;
+  --color-button-bg: var(--color-text-on-dark);
+  --color-button-bg-hover: #ffffff;
+  --color-button-text: #0e0e0e;
+  --color-tag-bg: rgba(18, 17, 16, 0.82);
+  --color-frame: #23211e;
+  --shadow-soft: 0 30px 70px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 28px 56px rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] {
+  @include dark-tokens;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark-tokens;
+  }
 }
