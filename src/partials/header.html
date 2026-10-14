@@ -1,0 +1,43 @@
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header is-dark" data-header>
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="{{brandName}}, ir al inicio">
+      <img
+        class="site-header__logo site-header__logo--dark"
+        src="./assets/images/logo-dark.png"
+        alt="{{brandName}}"
+        width="480"
+        height="235"
+      />
+      <img
+        class="site-header__logo site-header__logo--light"
+        src="./assets/images/logo-light.png"
+        alt=""
+        aria-hidden="true"
+        width="480"
+        height="235"
+      />
+    </a>
+
+    <button
+      class="site-header__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-nav"
+      aria-label="Abrir menú"
+      data-nav-toggle
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-header__nav" id="main-nav" aria-label="Principal" data-nav-panel>
+      <a href="/#about">La casa</a>
+      <a href="/#inventory">Vehículos</a>
+      <a href="/#services">Servicios</a>
+      <a href="/#process">Proceso</a>
+      <a class="site-header__cta" href="/#contact">Concertar cita</a>
+    </nav>
+  </div>
+</header>
