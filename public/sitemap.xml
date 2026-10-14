@@ -1,22 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://spainmotorscars.com/</loc>
+    <loc>https://spainmotorcars.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/" />
     <lastmod>2026-10-14</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://spainmotorscars.com/aviso-legal</loc>
+    <loc>https://spainmotorcars.vercel.app/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/" />
+    <lastmod>2026-10-14</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://spainmotorcars.vercel.app/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/aviso-legal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/legal-notice" />
     <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://spainmotorscars.com/privacidad</loc>
+    <loc>https://spainmotorcars.vercel.app/en/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/aviso-legal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/legal-notice" />
     <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://spainmotorscars.com/cookies</loc>
+    <loc>https://spainmotorcars.vercel.app/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/privacidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/privacy" />
+    <lastmod>2026-10-14</lastmod>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://spainmotorcars.vercel.app/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/privacidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/privacy" />
+    <lastmod>2026-10-14</lastmod>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://spainmotorcars.vercel.app/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/cookies" />
+    <lastmod>2026-10-14</lastmod>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://spainmotorcars.vercel.app/en/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spainmotorcars.vercel.app/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spainmotorcars.vercel.app/en/cookies" />
     <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
   </url>
