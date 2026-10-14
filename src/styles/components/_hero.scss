@@ -10,7 +10,7 @@
 .hero__media,
 .hero__overlay,
 .hero__poster,
-.hero__media iframe {
+.hero__video {
   position: absolute;
   inset: 0;
 }
@@ -21,26 +21,25 @@
 }
 
 .hero__poster {
-  background:
-    linear-gradient(130deg, rgba(17, 17, 17, 0.24), rgba(17, 17, 17, 0.72)),
-    url("../assets/images/photos/hero-poster.webp") center/cover no-repeat;
-  transform: scale(1.04);
+  background: url("../assets/images/photos/hero-poster.webp") center/cover no-repeat;
 }
 
-.hero__media iframe {
-  width: 100vw;
-  height: 56.25vw;
-  min-width: 177.77vh;
-  min-height: 100vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: grayscale(0.1) contrast(1.05);
+// Muted tones keep the red footage in line with the ivory, ink and bronze palette.
+.hero__poster,
+.hero__video {
+  filter: saturate(0.55) brightness(0.8) contrast(1.08);
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__overlay {
   background:
-    linear-gradient(180deg, rgba(17, 17, 17, 0.12) 0%, rgba(17, 17, 17, 0.62) 72%, rgba(17, 17, 17, 0.84) 100%),
+    linear-gradient(90deg, rgba(14, 14, 14, 0.72) 0%, rgba(14, 14, 14, 0.2) 65%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.2) 0%, rgba(17, 17, 17, 0.55) 70%, rgba(17, 17, 17, 0.86) 100%),
     radial-gradient(circle at 70% 28%, rgba(216, 198, 178, 0.2), transparent 32%);
 }
 

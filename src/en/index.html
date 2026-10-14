@@ -50,13 +50,20 @@
         <section class="hero" id="home" data-header-contrast>
           <div class="hero__media" aria-hidden="true">
             <div class="hero__poster"></div>
-            <iframe
-              src="https://player.vimeo.com/video/1012097674?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1"
-              title="Background video"
-              loading="lazy"
+            <video
+              class="hero__video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./assets/images/photos/hero-poster.webp"
               tabindex="-1"
-              allow="autoplay; fullscreen"
-            ></iframe>
+              data-hero-video
+            >
+              <source src="./assets/videos/hero-360.mp4" type="video/mp4" media="(max-width: 700px)" />
+              <source src="./assets/videos/hero-720.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="hero__overlay"></div>
 
