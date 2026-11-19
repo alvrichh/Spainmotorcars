@@ -13,7 +13,7 @@
 module.exports = {
   // Marca
   brandName: "Spain Motorcars",
-  siteUrl: "https://spainmotorcars.vercel.app", // Cambiar al dominio propio cuando exista
+  siteUrl: "https://mscars.vercel.app", // Cambiar al dominio propio cuando exista
 
   // Contacto
   email: "hola@spainmotorscars.com",

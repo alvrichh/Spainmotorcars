@@ -2,7 +2,7 @@
 
 Web oficial de **Spain Motorcars**, una casa que selecciona uno a uno coches premium de uso diario y algún clásico con historia.
 
-**Web publicada:** https://spainmotorcars.vercel.app/
+**Web publicada:** https://mscars.vercel.app/
 
 La web es una landing de una sola página, rápida y sin backend. Presenta la marca, el inventario disponible, los servicios y el proceso de compra, y dirige al visitante hacia el contacto directo.
 

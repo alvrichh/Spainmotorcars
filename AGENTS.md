@@ -1,6 +1,6 @@
 # AGENTS.md — Spain Motorcars (landing page)
 
-Entry point for any AI agent starting from scratch. The public site is https://spainmotorcars.vercel.app. Read this, then `README.md` (the full guide to the project structure and inventory).
+Entry point for any AI agent starting from scratch. The public site is https://mscars.vercel.app. Read this, then `README.md` (the full guide to the project structure and inventory).
 
 ## What it is
 Single-page landing for a car dealer that hand-picks premium everyday cars and a few classics. Pages: `/` (Spanish), `/en/` (English), and legal pages (`aviso-legal`, `privacidad`, `cookies`) in both languages, plus `404`. No backend and no runtime dependencies: plain HTML, SCSS and vanilla JavaScript modules, bundled with **Webpack 5**, hosted on **Vercel**.
