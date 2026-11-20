@@ -10,19 +10,20 @@
  * Los valores marcados con "EJEMPLO" son ficticios y deben sustituirse por los
  * reales antes de publicar.
  */
+const brandName = "MSCars";
 const phoneHref = "+34693858065";
 const whatsappBase = "https://wa.me/" + phoneHref.slice(1);
 
 module.exports = {
   // Marca
-  brandName: "Spain Motorcars",
-  siteUrl: "https://mscars.vercel.app", // Cambiar al dominio propio cuando exista
+  brandName,
+  siteUrl: "https://mscarss.vercel.app", // Cambiar al dominio propio cuando exista
 
   // Contacto
   phone: "+34 693 858 065",
   phoneHref,
   whatsappBase,
-  whatsappUrl: whatsappBase + "?text=" + encodeURIComponent("Hola, me gustaría recibir más información sobre los coches de Spain Motorcars."),
+  whatsappUrl: whatsappBase + "?text=" + encodeURIComponent(`Hola, vengo de la página web de ${brandName} y me gustaría recibir más información sobre vuestros coches.`),
   instagramUrl: "https://www.instagram.com/", // EJEMPLO: URL del perfil real
   instagramHandle: "Instagram", // EJEMPLO: usuario real, por ejemplo "@usuario"
 

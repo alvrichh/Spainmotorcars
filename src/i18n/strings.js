@@ -67,7 +67,7 @@ module.exports = {
     statusSold: "Vendido",
     enquirySubject: "Consulta: {car}",
     enquiryBody:
-      "Hola,\n\nMe interesa el {car}. ¿Podríais darme más información y disponibilidad para verlo?\n\nGracias."
+      "Hola, vengo de la página web de MSCars y me interesa el {car}. ¿Podríais darme más información y disponibilidad para verlo?\n\nGracias."
   },
 
   en: {
