@@ -32,7 +32,7 @@ module.exports = {
     langLabel: "Idioma",
 
     // Contact details
-    locations: "Madrid · Marbella · Atención a distancia",
+    locations: "Sevilla",
     hours: "Lunes a viernes, 10:00 a 19:00 · Sábados con cita",
 
     // Footer
@@ -90,7 +90,7 @@ module.exports = {
     themeLight: "Switch to light mode",
     langLabel: "Language",
 
-    locations: "Madrid · Marbella · Remote service",
+    locations: "Seville",
     hours: "Monday to Friday, 10:00 to 19:00 · Saturdays by appointment",
 
     footerTagline: "Premium cars and classics with a story, selected one by one.",
