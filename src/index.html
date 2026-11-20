@@ -34,7 +34,6 @@
         "url": "{{siteUrl}}/",
         "logo": "{{siteUrl}}/og-image.png",
         "image": "{{siteUrl}}/og-image.png",
-        "email": "{{email}}",
         "telephone": "{{phoneHref}}",
         "areaServed": "ES",
         "address": { "@type": "PostalAddress", "addressCountry": "ES", "addressLocality": "Madrid" },
@@ -271,10 +270,6 @@
             <div class="contact__panel" data-reveal>
               <dl class="contact__list">
                 <div>
-                  <dt>Email</dt>
-                  <dd><a href="mailto:{{email}}">{{email}}</a></dd>
-                </div>
-                <div>
                   <dt>Teléfono</dt>
                   <dd><a href="tel:{{phoneHref}}">{{phone}}</a></dd>
                 </div>
@@ -291,17 +286,11 @@
               <div class="contact__actions">
                 <a
                   class="button button--solid"
-                  href="https://wa.me/{{whatsappHref}}?text=Hola%2C%20me%20gustar%C3%ADa%20concertar%20una%20cita."
+                  href="{{whatsappUrl}}"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Escribir por WhatsApp
-                </a>
-                <a
-                  class="button button--outline"
-                  href="mailto:{{email}}?subject=Solicitud%20de%20cita"
-                >
-                  Enviar email
                 </a>
               </div>
             </div>

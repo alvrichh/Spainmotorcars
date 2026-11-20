@@ -163,7 +163,7 @@ module.exports = (_, argv = {}) => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        __SITE__: JSON.stringify({ email: site.email, brandName: site.brandName })
+        __SITE__: JSON.stringify({ whatsappBase: site.whatsappBase, brandName: site.brandName })
       }),
       ...pages.map(
         (page) =>

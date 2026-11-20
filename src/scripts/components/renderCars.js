@@ -2,7 +2,7 @@ import { cars } from "../data/cars";
 import strings from "../../i18n/strings";
 
 // Injected at build time from site.config.js (see webpack DefinePlugin).
-const CONTACT_EMAIL = __SITE__.email;
+const whatsappBase = __SITE__.whatsappBase;
 
 const lang = document.documentElement.lang === "en" ? "en" : "es";
 const t = strings[lang];
@@ -33,9 +33,8 @@ const formatPrice = (price) => (typeof price === "number" ? money.format(price) 
 
 const enquiryHref = (car) => {
   const name = `${car.brand} ${car.model} (${car.year})`;
-  const subject = encodeURIComponent(t.enquirySubject.replace("{car}", name));
-  const body = encodeURIComponent(t.enquiryBody.replace("{car}", name));
-  return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  const body = encodeURIComponent(strings.es.enquiryBody.replace("{car}", name));
+  return `${whatsappBase}?text=${body}`;
 };
 
 const renderCard = (car, index) => {

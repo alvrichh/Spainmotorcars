@@ -1,7 +1,7 @@
 /**
  * Datos de la marca y de la empresa.
  *
- * Es la única fuente de verdad para teléfono, email, redes y datos legales.
+ * Es la única fuente de verdad para teléfono, WhatsApp, redes y datos legales.
  * Cualquier página HTML puede usarlos escribiendo {{clave}}, por ejemplo {{phone}}.
  * Los textos que cambian con el idioma están en src/i18n/strings.js.
  * Se sustituyen al compilar, así que tras cambiar algo basta con volver a ejecutar
@@ -10,16 +10,19 @@
  * Los valores marcados con "EJEMPLO" son ficticios y deben sustituirse por los
  * reales antes de publicar.
  */
+const phoneHref = "+34693858065";
+const whatsappBase = "https://wa.me/" + phoneHref.slice(1);
+
 module.exports = {
   // Marca
   brandName: "Spain Motorcars",
   siteUrl: "https://mscars.vercel.app", // Cambiar al dominio propio cuando exista
 
   // Contacto
-  email: "hola@spainmotorscars.com",
-  phone: "+34 600 000 000", // EJEMPLO: teléfono real
-  phoneHref: "+34600000000", // EJEMPLO: mismo teléfono sin espacios
-  whatsappHref: "34600000000", // EJEMPLO: número para WhatsApp, sin "+" ni espacios
+  phone: "+34 693 858 065",
+  phoneHref,
+  whatsappBase,
+  whatsappUrl: whatsappBase + "?text=" + encodeURIComponent("Hola, me gustaría recibir más información sobre los coches de Spain Motorcars."),
   instagramUrl: "https://www.instagram.com/", // EJEMPLO: URL del perfil real
   instagramHandle: "Instagram", // EJEMPLO: usuario real, por ejemplo "@usuario"
 
